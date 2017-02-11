@@ -1,0 +1,21 @@
+{
+  "name": "text-maze",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Generate a maze that says something",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "text",
+    "maze",
+    "generator",
+    "creator"
+  ],
+  "author": "Jesse Blake <jesse@littlesystem.com>",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^3.1.1"
+  }
+}
