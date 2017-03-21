@@ -1,0 +1,1 @@
+{"version":3,"sources":["print.scss"],"names":[],"mappings":"AAAA,WACI,YAAa,CAChB","file":"print.css","sourcesContent":["#maze-menu {\n    display: none;    \n}\n"],"sourceRoot":"/source/"}

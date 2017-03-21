@@ -1,0 +1,28 @@
+#maze-menu {
+    padding: 20px 0 0 0;
+
+    .btn {
+        margin-bottom: 10px;
+    }
+
+    .maze-meter {
+        opacity: 1;
+        display: inline;
+        padding: 5px;
+        width: 0 !important;
+    }
+
+    .maze-meter:hover {
+        cursor: default;
+    }
+
+    .form-inline {
+        text-align: center;
+    }
+}
+
+#text-maze {
+    // Top margin is set with js.
+    margin: auto;
+    display: block;   
+}
