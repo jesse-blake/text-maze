@@ -1,6 +1,5 @@
 {
   "name": "text-maze",
-  "private": true,
   "version": "0.1.0",
   "description": "Generate a maze that says something",
   "main": "lib/index.js",
@@ -14,5 +13,16 @@
     "creator"
   ],
   "author": "Jesse Blake <jesse@littlesystem.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "directories": {
+    "example": "example"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jesse-blake/text-maze.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jesse-blake/text-maze/issues"
+  },
+  "homepage": "https://github.com/jesse-blake/text-maze#readme"
 }
