@@ -4,9 +4,18 @@
 
 # Text Maze
 
-An [npm](https://www.npmjs.com) package to generate a maze with a single solution, with paths in the form of text.
+An [npm](https://www.npmjs.com/package/text-maze) package to generate a maze that has a single solution, paths forming the characters in a string of text, and controls to do stuff, like: 
 
-The controls will solve the maze with or without animation, animate at different speeds, show and hide the text, rebuild the maze, and change the maze's text. It will resize automatically when the screen size changes too.
+* Regenerate the paths of the maze using the current text.
+* Show and hide the text.
+* Show and hide the solution.
+* Animate searching for the solution at various speeds.
+* Pause, continue and stop the animation.
+* Increase and decrease the size of the paths in the maze.
+* Customize the maze's text.
+* Restore the original text.
+
+The maze is responsive to screen size changes too.
 
 ## Example
 
@@ -14,24 +23,24 @@ Just clone this repo and point your browser to `text-maze/example/dist/index.js`
 
 ## Usage
 
-The following is a no-frills start-up. See `text-maze/example/dist` for the frills version. It uses [Bootstrap](https://github.com/twbs/bootstrap).
+Here are the no-frills up-and-running instructions. See `text-maze/example/dist` for frills, which uses [Bootstrap](https://github.com/twbs/bootstrap).
 
 1. Install:
-```
+```sh
 npm install --save text-maze
 ```
 2. Create `text-maze/index.js`:
-```
+```js
 var textmaze = require('text-maze');
 textmaze.init();
 ```
 3. Bundle with [Browserify](https://github.com/substack/node-browserify):
-```
+```sh
 npm install -g browserify
 browserify index.js -o text-maze.js
 ```
-4. Create: `text-maze/index.html` containing:
-```
+4. Create `text-maze/index.html` containing:
+```html
 <div id="maze-menu">
     <button id="maze-rebuild-ctrl" type="button" >Refresh Paths</button>
     <button id="maze-show-text-ctrl" type="button" >
@@ -55,37 +64,39 @@ browserify index.js -o text-maze.js
     <input id="maze-text-input-ctrl" type="text" placeholder="Change the text...">
     <button id="maze-reset-ctrl" type="button">Reset</button>
 </div>
+<canvas id="text-maze">Your browser does not support the canvas tag!</canvas>
+<script src="js/text-maze.js"></script>
 ```
 Note: the above `id`s are required, but the element types and their inner text can change.
 
 ## Options
 
-Define any or all of these in an object given to the Text Maze `init` function.
+Define any or all of these in an object given to the Text Maze `init` function. Defaults are shown.
 
-```
+```js
 textmaze.init({
 
-    // The text to be rendered in the maze. A string.
-    text: <a string of text>,
+    // The text to be rendered in the maze.
+    text: "Hope means hoping when things are hopeless, or it is no virtue at all. G.K.C.",
     
-    // Paint the text in the maze on load. Default: false
-    currentlyShowingText: <boolean>,
+    // Show the text in the maze on load.
+    currentlyShowingText: false,
     
-    // Show the speed meter. Use with Bootstrap (See text-maze/example/dist/index.html) Default: false
-    useSpeedMeter: <boolean>,
+    // Show the speed meter. Use with Bootstrap. (See text-maze/example/dist/index.html.)
+    useSpeedMeter: false,
     
     colors: {
-        // The color of text. Default: black
-        text: <a web color>,
+        // The color of the text; must be a web color.
+        text: 'black',
         
-        // The color of the solution path. Default: black
-        solution: <a web color>,    
+        // The color of the solution path; must be a web color.
+        solution: 'black',
         
-        // Randomize text and solution color. Default: false
-        randomize: <boolean>,
+        // Randomize text/solution color.
+        randomize: false,
         
-        // Fluctuate the text/solution color a little. Default: false
-        fuctuate: <boolean>
+        // Fluctuate the text/solution color a little.
+        fuctuate: false
     }
 });
 ```
@@ -106,6 +117,4 @@ Gulp will watch for changes in `text-maze/lib` and `text-maze/example/src`, and 
 
 Thanks to Herman Tulleken and his [Algorithms for Making More Interesting Mazes](http://www.gamasutra.com/blogs/HermanTulleken/20161005/282629/Algorithms_for_making_more_interesting_mazes.php) blog post.
 
-And to Patrick Wheeler on the [Programming Throwdown](http://www.programmingthrowdown.com/) podcast for mentioning that post in [Episode 59: Deploying Software](http://www.programmingthrowdown.com/2016/10/episode-59-deploying-software.html).
-
-And to [G.K. Chesterton](http://www.chesterton.org/quotations-of-g-k-chesterton/) for the quote used in the README image above.
+And to Patrick Wheeler on the [Programming Throwdown](http://www.programmingthrowdown.com/) podcast for mentioning the above blog post in [Episode 59: Deploying Software](http://www.programmingthrowdown.com/2016/10/episode-59-deploying-software.html).
