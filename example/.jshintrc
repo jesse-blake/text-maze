@@ -1,3 +1,4 @@
 {
-    "browserify": true
+    "browserify": true,
+    "devel": true
 }
