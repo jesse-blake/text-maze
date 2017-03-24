@@ -90,7 +90,7 @@ textmaze.init({
         text: 'black',
         
         // The color of the solution path; must be a web color.
-        solution: 'black',
+        solution: 'chartreuse',
         
         // Randomize text/solution color.
         randomize: false,
