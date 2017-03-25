@@ -1,10 +1,6 @@
 #maze-menu {
     padding: 20px 0 0 0;
 
-    .btn {
-        margin-bottom: 10px;
-    }
-
     .maze-meter {
         opacity: 1;
         display: inline;
@@ -16,8 +12,18 @@
         cursor: default;
     }
 
+    .dropdown-menu {
+        font-size: 12px;
+    }
+
     .form-inline {
         text-align: center;
+    }
+
+    .disabled {
+        pointer-events: none;
+        cursor: default;
+        opacity: 0.5;
     }
 }
 

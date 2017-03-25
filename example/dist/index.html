@@ -23,43 +23,70 @@
             
                 <!-- Rebuild maze control -->
                 <button id="maze-rebuild-ctrl" type="button" class="btn btn-sm btn-default">
-                    <span class="glyphicon glyphicon-refresh"></span> <span>Paths</span>
+                    <span class="glyphicon glyphicon-random"></span>
+                    <span>&nbsp;Paths</span>
                 </button>
 
                 <span class="hidden-xs">&nbsp;</span>
 
-                <!-- Show/hide maze text control -->
-                <button id="maze-show-text-ctrl" type="button" class="btn btn-sm btn-default">
-                    <span id="maze-show-text-label" class="glyphicon glyphicon-eye-open"></span>
-                    <span id="maze-hide-text-label" class="glyphicon glyphicon-eye-close"></span>
-                    <span>Text</span>
-                </button>
+                <!-- Control maze text -->
+                <div class="btn-group btn-group-sm">
+                    <button id="maze-show-text-ctrl" type="button" class="btn btn-default">
+                        <span id="maze-show-text-label" class="glyphicon glyphicon-eye-open"></span>
+                        <span id="maze-hide-text-label" class="glyphicon glyphicon-eye-close"></span>
+                        <span>&nbsp;Text</span>
+                    </button>
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" id="maze-color-text-random">Random Color</a></li>
+                        <li><a href="#" id="maze-color-text-default">Default Color</a></li>
+                        <li><a href="#" id="maze-color-text-black">Black</a></li>
+                        <li id="maze-fluctuate-text-color">
+                            <a id="maze-fluctuate-text-color-checked" href="#">Fluctuate Color &nbsp; <span class="glyphicon glyphicon-check"></span></a>
+                            <a id="maze-fluctuate-text-color-unchecked" href="#">Fluctuate Color &nbsp; <span class="glyphicon glyphicon-unchecked"></span></a>
+                        </li>
+                    </ul>
+                </div>
 
                 <span class="hidden-xs">&nbsp;</span>
 
-                <!-- Show/hide maze solution control -->
-                <button id="maze-show-solution-ctrl"  type="button" class="btn btn-sm btn-default">
-                    <span id="maze-show-solution-label" class="glyphicon glyphicon-eye-open"></span>
-                    <span id="maze-hide-solution-label" class="glyphicon glyphicon-eye-close"></span>
-                    <span>Solution</span>
-                </button>
+                <!-- Control maze solution -->
+                <div class="btn-group btn-group-sm">
+                    <button id="maze-show-solution-ctrl" type="button" class="btn btn-default">
+                        <span id="maze-show-solution-label" class="glyphicon glyphicon-eye-open"></span>
+                        <span id="maze-hide-solution-label" class="glyphicon glyphicon-eye-close"></span>
+                        <span>&nbsp;Solution</span>
+                    </button>
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" id="maze-color-solution-random">Random Color</a></li>
+                        <li><a href="#" id="maze-color-solution-default">Default Color</a></li>
+                        <li><a href="#" id="maze-color-solution-black">Black</a></li>
+                        <li id="maze-fluctuate-solution-color">
+                            <a id="maze-fluctuate-solution-color-checked" href="#">Fluctuate Color &nbsp; <span class="glyphicon glyphicon-check"></span></a>
+                            <a id="maze-fluctuate-solution-color-unchecked" href="#">Fluctuate Color &nbsp; <span class="glyphicon glyphicon-unchecked"></span></a>
+                        </li>
+                    </ul>
+                </div>
 
                 <span class="hidden-xs">&nbsp;</span>
 
                 <!-- Solve animation controls -->
                 <div class="btn-group btn-group-sm hidden-xs">
                     <button id="maze-solve-start-ctrl" type="button" class="btn btn-default">
-                        <span>Solve</span>
+                        <span>&nbsp;Solve</span>
                         <span class="glyphicon glyphicon-play"></span>
                     </button>
                     <button id="maze-solve-pause-ctrl" type="button" class="btn btn-default">
                         <span class="glyphicon glyphicon-pause"></span>
                     </button>
-                    <button id="maze-solve-reset-ctrl" type="button" class="btn btn-default">
-                        <span class="glyphicon glyphicon-stop"></span>
-                    </button>
+                    <button id="maze-solve-reset-ctrl" type="button" class="btn btn-default"><span class="glyphicon glyphicon-stop"></span></button>
                     <button id="maze-decrease-speed-ctrl" type="button" class="btn btn-default">
-                        <span>Speed</span>
+                        <span>Speed&nbsp;</span>
                         <span class="glyphicon glyphicon-minus"></span>
                     </button>
                     <button id="maze-increase-speed-ctrl" type="button" class="btn btn-default">
@@ -70,17 +97,16 @@
                 <span class="hidden-xs">&nbsp;</span>
 
                 <!-- Maze size controls -->
-                <div class="btn-group btn-group-sm hidden-xs">
-                    <button id="maze-decrease-size-ctrl" type="button" class="btn btn-default">
-                        <span>Size</span>
-                        <span class="glyphicon glyphicon-minus"></span>
+                <div class="btn-group btn-group-sm">
+                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                        <span>Path Size&nbsp;</span>
+                        <span class="caret"></span>
                     </button>
-                    <button id="maze-increase-size-ctrl"  type="button" class="btn btn-default">
-                        <span class="glyphicon glyphicon-plus"></span>
-                    </button>
-                    <button id="maze-auto-size-ctrl" type="button" class="btn btn-default">
-                        <span class="glyphicon glyphicon-fullscreen"></span> <span>Fit</span>
-                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" id="maze-decrease-size-ctrl">Decrease</a></li>
+                        <li><a href="#" id="maze-increase-size-ctrl">Increase</a></li>
+                        <li><a href="#" id="maze-auto-size-ctrl">Fit To Screen</a></li>
+                    </ul>
                 </div>
 
                 <span class="hidden-xs">&nbsp;</span>
@@ -90,7 +116,7 @@
                     <input id="maze-text-input-ctrl" type="text" class="form-control" placeholder="Change the text...">
                     <span class="input-group-btn">
                         <button id="maze-reset-ctrl" type="button" class="btn btn-default">
-                            <span class="glyphicon glyphicon-remove"></span>
+                            <span class="glyphicon glyphicon-refresh"></span>
                         </button>
                     </span>
                 </div>
