@@ -4,5 +4,6 @@ textMaze.init({
     useSpeedMeter: true,
     fluctuateSolutionColor: true,
     currentlyShowingText: false,
-    currentlyShowingSolution: false
+    currentlyShowingSolution: true,
+    solutionColor: 'black'
 });
