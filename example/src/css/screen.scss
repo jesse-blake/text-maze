@@ -25,10 +25,17 @@
         cursor: default;
         opacity: 0.5;
     }
+
+    // Space between controls when wrapped at sm screen sizes.
+    @media(max-width: 991px) {
+        .btn-default {
+            margin-bottom: 10px;
+        }
+    }
 }
 
 #text-maze {
-    // Top margin is set with js.
+    // The top margin of the maze is set with JS.
     margin: auto;
     display: block;   
 }
