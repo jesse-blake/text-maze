@@ -17,6 +17,7 @@
   "devDependencies": {
     "browserify": "^14.0.0",
     "del": "^2.2.2",
+    "es5-shim": "^4.5.9",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-cssnano": "^2.1.2",
     "gulp-jshint": "^2.0.4",
