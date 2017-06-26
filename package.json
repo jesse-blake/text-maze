@@ -2,9 +2,9 @@
   "name": "text-maze",
   "version": "1.1.1",
   "description": "Generate a maze that says something",
-  "main": "lib/index.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "keywords": [
     "text",
@@ -14,9 +14,6 @@
   ],
   "author": "Jesse Blake <jesse@littlesystem.com>",
   "license": "MIT",
-  "directories": {
-    "example": "example"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jesse-blake/text-maze.git"
@@ -24,5 +21,9 @@
   "bugs": {
     "url": "https://github.com/jesse-blake/text-maze/issues"
   },
-  "homepage": "https://github.com/jesse-blake/text-maze#readme"
+  "homepage": "https://github.com/jesse-blake/text-maze#readme",
+  "devDependencies": {
+    "chai": "^4.0.2",
+    "mocha": "^3.4.2"
+  }
 }
