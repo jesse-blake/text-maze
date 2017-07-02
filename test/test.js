@@ -22,8 +22,18 @@ describe('maze config: user params:', function() {
 
 require('./utils/break-text-into-lines')();
 
+require('./utils/char-maps.js')();
+
 require('./utils/pad-lines')();
 
 require('./utils/embed-text')();
 
+require('./utils/Char')();
+
+require('./utils/CharSide')();
+
+require('./utils/connect-chars-horizontally')();
+
 require('./utils/random-in-range')();
+
+require('./utils/shuffle-array')();
