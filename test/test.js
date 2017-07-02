@@ -18,12 +18,6 @@ describe('maze config: user params:', function() {
         expect(() => { textMaze.init('foo', 'bar'); }).to.throw(TypeError, 'option "width"');
         expect(() => { textMaze.init('foo', -43); }).to.throw(TypeError, 'option "width"');
     });
-
-    it('"height" is required and should be a positive integer', function() {
-        expect(() => { textMaze.init('foo', 43); }).to.throw(TypeError, 'option "height"');
-        expect(() => { textMaze.init('foo', 43, 'bar'); }).to.throw(TypeError, 'option "height"');
-        expect(() => { textMaze.init('foo', 43, -43); }).to.throw(TypeError, 'option "height"');
-    });
 });
 
 describe('maze util: break text into lines:', function() {
@@ -191,6 +185,29 @@ describe('maze util: embed text:', function() {
             } else {
                 expect(maze[13][i].ch).to.equal(' ');
             }
+        }
+    });
+});
+
+describe('maze util: random in range:', function() {
+
+    const rir = utils.randomInRange;
+
+    it('should bound by its domain [min, max]', function() {
+        for (let i = 0; i < 100; i++) {
+            expect(rir(0, 2)).to.be.within(0, 2);
+        }
+    });
+
+    it('should allow negative domain values', function() {
+        for (let i = 0; i < 100; i++) {
+            expect(rir(-5, 5)).to.be.within(-5, 5);
+        }
+    });
+
+    it('should work with small domains', function() {
+        for (let i = 0; i < 5; i++) {
+            expect(rir(43, 43)).to.equal(43);
         }
     });
 });
