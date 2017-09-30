@@ -13,7 +13,10 @@ module.exports = function() {
                 utils.charWhitelist().split('').forEach(function(ch2) {
 
                     // Connect from right to left.
-                    let [maze, charlist] = utils.embedText([ch1 + ch2], 20); // 20 is more width than needed, but not testing embed-text.
+                    let result = utils.embedText([ch1 + ch2], 20); // 20 is more width than needed, but not testing embed-text.
+
+                    let maze     = result.maze;
+                    let charlist = result.charlist;
 
                     let side = Object.create(utils.CharSide)
                     side.init(charlist[0], 'right'); // Right.
@@ -50,7 +53,10 @@ module.exports = function() {
                 utils.charWhitelist().split('').forEach(function(ch2) {
 
                     // Connect from left to right.
-                    let [maze, charlist] = utils.embedText([ch1 + ch2], 100); // 20 is more width than needed, but not testing embed-text.
+                    let result = utils.embedText([ch1 + ch2], 100); // 20 is more width than needed, but not testing embed-text.
+
+                    let maze     = result.maze;
+                    let charlist = result.charlist;
 
                     let side = Object.create(utils.CharSide)
                     side.init(charlist[1], 'left'); // Left.

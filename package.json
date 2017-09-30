@@ -4,7 +4,8 @@
   "description": "Generate a maze that says something",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "lint": "find ./lib -name '*.js' | xargs eslint && echo '✔︎ js linted ok'"
   },
   "keywords": [
     "text",
@@ -24,6 +25,7 @@
   "homepage": "https://github.com/jesse-blake/text-maze#readme",
   "devDependencies": {
     "chai": "^4.0.2",
+    "eslint": "^4.7.2",
     "mocha": "^3.4.2"
   }
 }
