@@ -4,6 +4,8 @@ Create mazes with paths in the form of lines of text.
 
 Use [text-maze-render](https://github.com/jesse-blake/text-maze-render) to render a text maze in a browser via the HTML Canvas API.
 
+See it in use: [https://littlesystem.com/maze](https://littlesystem.com/maze)
+
 ## Description
 
 Each maze is a 2D array. The value at each index in the nested arrays is a number indicating the type of location in the maze. The solution path follows negative values through the maze.
@@ -13,6 +15,10 @@ Each maze is a 2D array. The value at each index in the nested arrays is a numbe
 * `0` Not a path.
 * `-1` As 1, but also on the solution path.
 * `-2` As 2, but also on the solution path.
+
+Current character whitelist for text:
+
+`abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .?!'`
 
 ## Install
 
